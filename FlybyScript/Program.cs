@@ -12,11 +12,21 @@ namespace Flyby11
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
         [STAThread]
-        static void Main()
+        static int Main(string[] args)
         {
+            var headless = args.Any(a => a.Equals("--headless", StringComparison.OrdinalIgnoreCase));
+            var isoArg = args.FirstOrDefault(a => a.StartsWith("--iso=", StringComparison.OrdinalIgnoreCase));
+            var isoPath = isoArg?.Substring("--iso=".Length).Trim('"');
+
+            if (headless)
+            {
+                return HeadlessUpgrade.Run(isoPath);
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+            return 0;
         }
     }
 }

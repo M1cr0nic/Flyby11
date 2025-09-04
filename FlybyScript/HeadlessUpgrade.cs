@@ -8,9 +8,9 @@ using System.IO;
 
 namespace Flyby11
 {
-    internal static class HeadlessUpgrade
+    public static class HeadlessUpgrade
     {
-        public static int Run(string isoPath)
+        public static int Run_Backup(string isoPath)
         {
             try
             {
@@ -70,6 +70,10 @@ namespace Flyby11
                 Console.Error.WriteLine(ex.ToString());
                 return 1;
             }
+        }
+
+        public static  Run(string isoPath) {
+            HandleIso(isoPath);
         }
     }
 }

@@ -86,6 +86,7 @@
       <DependentUpon>CompatibilityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FAQHandler.cs" />
+    <Compile Include="HeadlessUpgrade.cs" />
     <Compile Include="IsoHandler.cs" />
     <Compile Include="Locales\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,14 +126,22 @@
     <EmbeddedResource Include="Locales\Strings.ar.resx" />
     <EmbeddedResource Include="Locales\Strings.cs-CZ.resx" />
     <EmbeddedResource Include="Locales\Strings.de.resx" />
-    <EmbeddedResource Include="Locales\Strings.fr.resx" />
+    <EmbeddedResource Include="Locales\Strings.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locales\Strings.he.resx" />
     <EmbeddedResource Include="Locales\Strings.hu.resx" />
-    <EmbeddedResource Include="Locales\Strings.it.resx" />
+    <EmbeddedResource Include="Locales\Strings.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locales\Strings.ja.resx" />
-    <EmbeddedResource Include="Locales\Strings.nl.resx" />
+    <EmbeddedResource Include="Locales\Strings.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locales\Strings.pl.resx" />
-    <EmbeddedResource Include="Locales\Strings.sv-SE.resx" />
+    <EmbeddedResource Include="Locales\Strings.sv-SE.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locales\Strings.tr.resx" />
     <EmbeddedResource Include="Locales\Strings.zh-CN.resx" />
     <EmbeddedResource Include="MainForm.resx">
